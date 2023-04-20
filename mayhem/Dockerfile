@@ -4,5 +4,6 @@ WORKDIR /src
 RUN apt install swig -y
 RUN python3 -m pip install PyPDF2
 RUN python3 -m pip install .
+RUN mv /src/mayhem/testsuite /testsuite
 
 CMD ["/src/mayhem/fuzz_verify.py"]
